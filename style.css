@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','sans-serif';
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1050px;
+    height: 100vh;
+    background-color: #027dce;
+    margin: auto;
+}
+.container{
+    padding: 20px;
+    margin: 0 20px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+section{
+    background-color: #fff;
+    border-radius: 10px;
+}
+.tool-area{
+    width: 210px;
+    padding: 10px 20px;
+}
+.tool-area .row{
+    margin-bottom: 20px;
+}
+.tool-area .options{
+    list-style: none;
+    margin: 10px 0 0 10px;
+}
+.tool-area .option{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.tool-area .option :where(span, label){
+    padding-left: 10px;
+}
+.tool-area #fill-color{
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+}
+.tool-area .option:is(:hover, .active) img{
+    filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+.tool-area .option:is(:hover, .active) :where(span, label){
+    color: #027dce;
+}
+#fill-color:checked ~ label{
+    color: #027dce;
+}
+#range-slider{
+    width: 100%;
+    margin-top: 4px;
+    height: 5px;
+}
+.drawing-area{
+    flex: 1;
+}
+.colors .options{
+    display: flex;
+    justify-content: space-between;
+}
+.colors .option:nth-child(1){
+    background-color: #fff;
+    border: 2px solid #808080;
+}
+.colors .option:nth-child(2){
+    background-color: #000;
+}
+.colors .option:nth-child(3){
+    background-color: #ff0000;
+}
+.colors .option:nth-child(4){
+    background-color: #008000;
+}
+.colors .option:nth-child(5){
+    background-color: #0224ab; 
+}
+.colors .option{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+.colors .option:is(:hover, .selected)::before{
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    background-color: inherit;
+    border-radius: inherit;
+    border: 2px solid #fff;
+    transform: translate(-50%, -50%);
+}
+.colors .option:last-child:is(:hover, .selected)::before{
+    border: none;
+}
+#color-picker{
+    opacity: 0;
+    cursor: pointer;
+}
+.btn{
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    padding: 10px 0;
+    border-radius: 4px;
+    background: none;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+.clear-btn{
+    border: 1px solid #027dce;
+    transition: all 0.3s ease;
+}
+.clear-btn:hover{
+    background-color: #027dce;
+    color: #fff;
+}
+.save-img{
+    background-color: #027dce;
+    color: #fff;
+}
