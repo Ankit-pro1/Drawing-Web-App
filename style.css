@@ -111,8 +111,8 @@ section{
     border: 2px solid #fff;
     transform: translate(-50%, -50%);
 }
-.colors .option:last-child:is(:hover, .selected)::before{
-    border: none;
+.colors .option:first-child:is(:hover, .selected)::before{
+    border: 2px solid #808080;
 }
 #color-picker{
     opacity: 0;
@@ -146,4 +146,20 @@ canvas{
     height: 100%;
     border-radius: inherit;
     cursor: pointer;
+}
+
+@media screen and (max-width: 572px){
+    .container{
+        flex-direction: column-reverse;
+    }
+    .tool-area{
+        display: flex;
+        background-color: #fff;
+        justify-content: space-between;
+    }
+    .colors .options{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
 }
