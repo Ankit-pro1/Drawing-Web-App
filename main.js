@@ -132,6 +132,13 @@ rangeSlider.addEventListener('change', () => {
     brushWidth = rangeSlider.value;
     console.log(brushWidth);
 })
+
+
 canva.addEventListener('mousedown', startDraw);
 canva.addEventListener('mousemove', drawing);
 canva.addEventListener('mouseup', () => isDraw = false);
+
+// For touch screen devices
+canva.addEventListener('touchstart', startDraw);
+canva.addEventListener('touchmove', drawing);
+canva.addEventListener('touchend', () => isDraw = false);
