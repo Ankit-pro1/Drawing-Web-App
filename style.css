@@ -147,19 +147,3 @@ canvas{
     border-radius: inherit;
     cursor: pointer;
 }
-
-@media screen and (max-width: 572px){
-    .container{
-        flex-direction: column-reverse;
-    }
-    .tool-area{
-        display: flex;
-        background-color: #fff;
-        justify-content: space-between;
-    }
-    .colors .options{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    }
-}
